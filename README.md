@@ -118,7 +118,8 @@ From the previous train session, it looks like we could augment data and add dro
 
 The first image might be mistaken for the 'Keep Left' sign because they look quite similar in both direction of the arrow and the color of the sign.
 
-#### 2. Here are the results of the prediction:
+#### 2. Resultd of Web Images
+Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -131,7 +132,7 @@ The first image might be mistaken for the 'Keep Left' sign because they look qui
 
 The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. This is much lower than the test accuracy of 93%. However, the sample size of 5 is very small.
 
-#### 3. 
+#### 3. Top softmax probabilities
 
 For the first image, the model got it wrong as it predicts the image to be 'Keep left'. However, it was 'Turn right next' The top five soft max probabilities were
 
