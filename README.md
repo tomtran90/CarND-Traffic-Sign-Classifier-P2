@@ -42,7 +42,8 @@ This is a sample image.
 
 ### Design and Test a Model Architecture
 
-#### 1. The images are converted into YUV space to follow the baseline in [this paper](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) and Y channel is selected and normalized.
+#### 1. Preprocessing
+The images are converted into YUV space to follow the baseline in [this paper](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) and Y channel is selected and normalized.
 
 Here is an example of a traffic sign image before:
 
@@ -60,7 +61,9 @@ Below is an example of an augmented image (right) compared to the grayscale one:
 
 ![Augmented Image](augment.png)
 
-#### 2. I keep the original LeNet structure with some added dropout layers to reduce over-fitting.
+#### 2. Architecture
+
+I keep the original LeNet structure with some added dropout layers to reduce over-fitting.
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
@@ -83,9 +86,11 @@ My final model consisted of the following layers:
 
  
 
-#### 3. To train the model, I used an Adam optimizer, with a learning rate of 0.001, batch size of 128, and 70 epochs. Adam is a good optimizer that combines the benefits of momentum with the benefits of dynamic learning rate from RMSProp. The training seems to plateau after 20 epochs. So training 70 epochs was not necessary.
+#### 3. Training
+To train the model, I used an Adam optimizer, with a learning rate of 0.001, batch size of 128, and 70 epochs. Adam is a good optimizer that combines the benefits of momentum with the benefits of dynamic learning rate from RMSProp. The training seems to plateau after 20 epochs. So training 70 epochs was not necessary.
 
-#### 4. My final model results were: 
+#### 4. Results
+My final model results were: 
 * training and validation accuracies are between .94 and .96
 * test set accuracy of .93
 
@@ -105,11 +110,11 @@ From the previous train session, it looks like we could augment data and add dro
 
 #### 1. Here are five German traffic signs that I found on the web:
 
-![Web Image 1][/webimages/web1.jpg] 
-![Web Image 2][/webimages/web2.jpg] 
-![Web Image 3][/webimages/web3.jpg] 
-![Web Image 4][/webimages/web4.jpg] 
-![Web Image 5][/webimages/web5.jpg] 
+![Web Image 1](/webimages/web1.jpg) 
+![Web Image 2](/webimages/web2.jpg) 
+![Web Image 3](/webimages/web3.jpg) 
+![Web Image 4](/webimages/web4.jpg) 
+![Web Image 5](/webimages/web5.jpg) 
 
 The first image might be mistaken for the 'Keep Left' sign because they look quite similar in both direction of the arrow and the color of the sign.
 
