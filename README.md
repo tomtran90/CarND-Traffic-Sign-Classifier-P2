@@ -31,11 +31,11 @@ The goals / steps of this project are the following:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing the frequency of each class. The requency of classes are consistent through the train, validation, and test sets.
+Here is an exploratory visualization of the data set. It is a bar chart showing the frequency of each class. The frequency of classes are consistent throughout the train, validation, and test sets.
 
 ![Classes](hist.png)
 
-This is a sample of the images.
+This is a sample of the training images.
 
 ![Sample](download.png)
 
@@ -43,13 +43,13 @@ This is a sample of the images.
 ### Design and Test a Model Architecture
 
 #### 1. Preprocessing
-The images are converted into YUV space to follow the baseline in [this paper](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) and Y channel is selected and normalized.
+The images are converted into YUV space to follow the baseline in [this paper](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) . Y channel is selected and normalized.
 
 Here is an example of a traffic sign image before:
 
 ![Original Image](origin.png)
 
-And grayscaling only (left) compared to transformed image (right):
+And grayscaling only (left) compared to the image with increased contrast (right):
 
 ![Grayscale only (left) and Transformed (right)](contrast.png)
 
@@ -63,7 +63,7 @@ Below is an example of an augmented image (right) compared to the grayscale one 
 
 #### 2. Architecture
 
-I keep the original LeNet structure with some added dropout layers to reduce over-fitting.
+I keep the original LeNet5 structure with some added dropout layers to reduce over-fitting.
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
@@ -96,7 +96,7 @@ My final model results were:
 
 I first ran the original LeNet architecture without the dropout layers and using only the original data. There was a serious over-fitting problem since the training accuracy was close to 1.0, but validation accuracy was only about .85. 
 
-So there are a few things to fix this:
+So there are a few options to fix this:
 * More data
 * Use an architecture that can generalize better
 * Add dropout/regularization
