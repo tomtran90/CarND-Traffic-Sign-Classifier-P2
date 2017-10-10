@@ -31,7 +31,7 @@ The goals / steps of this project are the following:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing the frequency of each class. The requency of classes are consistent through the train, validation and test.
+Here is an exploratory visualization of the data set. It is a bar chart showing the frequency of each class. The requency of classes are consistent through the train, validation, and test sets.
 
 ![Classes](hist.png)
 
@@ -49,7 +49,7 @@ Here is an example of a traffic sign image before:
 
 ![Original Image](origin.png)
 
-And grayscaling only compared to transformed image :
+And grayscaling only (left) compared to transformed image (right):
 
 ![Grayscale only (left) and Transformed (right)](contrast.png)
 
@@ -57,7 +57,7 @@ I decided to generate additional data since the number of records for each class
 
 To add more data to the the data set, I use augmentation techniques like random rotation, scaling, and translation. I tried 500 images per class, but it didn't seem enough. So I did 10 times more of the original number of images.
 
-Below is an example of an augmented image (right) compared to the grayscale one:
+Below is an example of an augmented image (right) compared to the grayscale one (left):
 
 ![Augmented Image](augment.png)
 
@@ -118,7 +118,7 @@ From the previous train session, it looks like we could augment data and add dro
 
 The first image might be mistaken for the 'Keep Left' sign because they look quite similar in both direction of the arrow and the color of the sign.
 
-#### 2. Resultd of Web Images
+#### 2. Results of Web Images
 Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
