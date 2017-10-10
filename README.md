@@ -31,7 +31,7 @@ The goals / steps of this project are the following:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing the frequency of each class. The frequency of classes are consistent throughout the train, validation, and test sets.
+Here is an exploratory visualization of the data set. It is a bar chart showing the frequency of each class. The frequencies of classes are consistent throughout the train, validation, and test sets.
 
 ![Classes](hist.png)
 
