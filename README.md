@@ -35,7 +35,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 ![Classes](hist.png)
 
-This is a sample image.
+This is a sample of the images.
 
 ![Sample](download.png)
 
