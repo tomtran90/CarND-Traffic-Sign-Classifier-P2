@@ -13,13 +13,13 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 ---
-###Writeup / README
+### Writeup / README
 
-[Project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+[Project code](Traffic_Sign_Classifier.ipynb)
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
-####1. Basic summary of the data set. 
+#### 1. Basic summary of the data set. 
 
 * The size of training set is 34799
 * The size of the validation set is 4410
@@ -29,7 +29,7 @@ The goals / steps of this project are the following:
 
 
 
-####2. Include an exploratory visualization of the dataset.
+#### 2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set. It is a bar chart showing the frequency of each class. The requency of classes are consistent through the train, validation and test.
 
@@ -40,9 +40,9 @@ This is a sample image.
 ![Sample](download.png)
 
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
-####1. The images are converted into YUV space to follow the baseline in [this paper](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) and Y channel is selected and normalized.
+#### 1. The images are converted into YUV space to follow the baseline in [this paper](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) and Y channel is selected and normalized.
 
 Here is an example of a traffic sign image before:
 
@@ -58,9 +58,9 @@ To add more data to the the data set, I use augmentation techniques like random 
 
 Below is an example of an augmented image (right) compared to the grayscale one:
 
-![Augmented Image][augment.png]
+![Augmented Image](augment.png)
 
-####2. I keep the original LeNet structure with some added dropout layers to reduce over-fitting.
+#### 2. I keep the original LeNet structure with some added dropout layers to reduce over-fitting.
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
@@ -83,9 +83,9 @@ My final model consisted of the following layers:
 
  
 
-####3. To train the model, I used an Adam optimizer, with a learning rate of 0.001, batch size of 128, and 70 epochs. Adam is a good optimizer that combines the benefits of momentum with the benefits of dynamic learning rate from RMSProp. The training seems to plateau after 20 epochs. So training 70 epochs was not necessary.
+#### 3. To train the model, I used an Adam optimizer, with a learning rate of 0.001, batch size of 128, and 70 epochs. Adam is a good optimizer that combines the benefits of momentum with the benefits of dynamic learning rate from RMSProp. The training seems to plateau after 20 epochs. So training 70 epochs was not necessary.
 
-####4. My final model results were: 
+#### 4. My final model results were: 
 * training and validation accuracies are between .94 and .96
 * test set accuracy of .93
 
@@ -101,9 +101,9 @@ So there are a few things to fix this:
 From the previous train session, it looks like we could augment data and add dropout layers. After augmented about 500 more images per class and added dropout layers, I still experienced over-fitting. Therefore, I decided to augmented a lot more data. I also increase the number of outputs for the FC layers. I chose dropout rate of 0.3 by trying multiple times to see which one works best. I was able to get to about .95 training and validation accuracies. Evaluation on the test set yields .93 accuracy.
 
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. Here are five German traffic signs that I found on the web:
+#### 1. Here are five German traffic signs that I found on the web:
 
 ![Web Image 1][/webimages/web1.jpg] 
 ![Web Image 2][/webimages/web2.jpg] 
@@ -113,7 +113,7 @@ From the previous train session, it looks like we could augment data and add dro
 
 The first image might be mistaken for the 'Keep Left' sign because they look quite similar in both direction of the arrow and the color of the sign.
 
-####2. Here are the results of the prediction:
+#### 2. Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -126,7 +126,7 @@ The first image might be mistaken for the 'Keep Left' sign because they look qui
 
 The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. This is much lower than the test accuracy of 93%. However, the sample size of 5 is very small.
 
-####3. 
+#### 3. 
 
 For the first image, the model got it wrong as it predicts the image to be 'Keep left'. However, it was 'Turn right next' The top five soft max probabilities were
 
